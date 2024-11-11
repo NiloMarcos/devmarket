@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# DevMarket - Ecommerce
 
-First, run the development server:
+DevMarket é uma aplicação de e-commerce voltada para a compra e gerenciamento de produtos. Desenvolvida com Next.js e React, ela permite a visualização de itens, além de fornecer uma interface para registro de novos produtos através de um formulário intuitivo.
+
+## Stack utilizada
+
+**Front-end:** NextJS, TypeScript, TailwindCSS.
+
+**Back-end:** Node, Express.
+
+## Funcionalidades
+
+Listagem de Produtos: Exibe produtos em cards com informações detalhadas como nome, peso, perecibilidade, preço e data de validade.
+
+Registro de Novo Produto: Botão para abrir um modal e registrar um novo produto, com campos para nome, unidade de medida, quantidade, perecibilidade, preço, data de validade e data de fabricação.
+
+Editar um Produto: Botão para abrir um modal e editar o produto com novas informações com os seguinter campos nome, unidade de medida, quantidade, perecibilidade, preço, data de validade e data de fabricação.
+
+Navegação Simplificada: Menu com os links das telas.
+
+Paginação: Organização da listagem de produtos com paginação para melhor visualização.
+
+
+## Rodando localmente
+
+Clone o projeto
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/NiloMarcos/devmarket.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Entre no diretório do projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd devmarket
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Instale as dependências na raiz
 
-## Learn More
+```bash
+  yarn install
+```
 
-To learn more about Next.js, take a look at the following resources:
+Instale as dependências do servidor
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  cd server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  yarn install
 
-## Deploy on Vercel
+  yarn dev ( Após instalar as dependências rode este comando para subir o servidor ).
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Inicie o projeto na raiz
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+  yarn dev
+```
+
+OBS: É necessário rodar o servidor primeiro para que a URL de busca de produtos esteja ativa. As funções de editar e adicionar um novo produto precisam, obrigatoriamente, que o servidor esteja em execução.
+
