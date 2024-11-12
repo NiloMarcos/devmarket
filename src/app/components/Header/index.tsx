@@ -1,11 +1,20 @@
-"use client"
+"use client";
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { MinicartIcon } from "@/app/assets/minicart";
 import Link from 'next/link';
 
 export function Header() {
+  const router = useRouter();
   const [activeLink, setActiveLink] = useState<string>('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const path = window.location.pathname.split('/').pop();
+      setActiveLink(path || '');
+    }
+  }, [router]);
 
   const handleLinkClick = (link: string) => {
     setActiveLink(link);
@@ -22,14 +31,14 @@ export function Header() {
           <Link
             href="/dashboard/Home"
             className={`text-[0.875rem] font-medium text-white relative ${
-              activeLink === 'home' ? 'text-yellow' : ''
+              activeLink === 'Home' ? 'text-yellow' : ''
             }`}
-            onClick={() => handleLinkClick('home')}
+            onClick={() => handleLinkClick('Home')}
           >
             Início
             <span
-              className={`absolute left-0 bottom-0 w-full h-[2px] bg-yellow transform scale-x-0 transition-all duration-300 ${
-                activeLink === 'home' ? 'scale-x-100' : 'scale-x-0'
+              className={`absolute left-0 bottom-0 w-full h-[2px] bg-yellow transform transition-all duration-300 ${
+                activeLink === 'Home' ? 'scale-x-100' : 'scale-x-0'
               }`}
             />
           </Link>
@@ -37,14 +46,14 @@ export function Header() {
           <Link
             href="/dashboard/Products"
             className={`text-[0.875rem] font-medium text-white relative ${
-              activeLink === 'products' ? 'text-yellow' : ''
+              activeLink === 'Products' ? 'text-yellow' : ''
             }`}
-            onClick={() => handleLinkClick('products')}
+            onClick={() => handleLinkClick('Products')}
           >
             Produtos
             <span
-              className={`absolute left-0 bottom-0 w-full h-[2px] bg-yellow transform scale-x-0 transition-all duration-300 ${
-                activeLink === 'products' ? 'scale-x-100' : 'scale-x-0'
+              className={`absolute left-0 bottom-0 w-full h-[2px] bg-yellow transform transition-all duration-300 ${
+                activeLink === 'Products' ? 'scale-x-100' : 'scale-x-0'
               }`}
             />
           </Link>

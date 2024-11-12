@@ -113,7 +113,7 @@ export function ProductCard({
 
   return (
     <div className="flex flex-row flex-wrap gap-[1.625rem]">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
+      <div className="grid grid-cols-4 gap-4 w-full sm-max:grid-cols-1">
         {currentItems.map((item: Items) => (
           <div
             key={item.id}
@@ -130,7 +130,7 @@ export function ProductCard({
 
               {editProductId === item.id && (
                 <div className="w-full h-full flex justify-center items-center left-0 top-0 bg-black bg-opacity-50 z-10 fixed">
-                  <div className="w-full max-w-[42.188rem] bg-[#12131B] rounded-[0.625rem] relative">
+                  <div className="w-full max-w-[42.188rem] bg-[#12131B] rounded-[0.625rem] relative sm-max:mx-5">
                     <p className="text-[1.25rem] font-bold text-white text-center pt-[0.938rem] pb-[2rem]">
                       Editar produto
                     </p>
@@ -321,7 +321,7 @@ export function ProductCard({
         
         {viewProduct && (
           <div className="w-full h-full flex justify-center items-center left-0 top-0 bg-black bg-opacity-50 z-10 fixed">
-            <div className="w-full max-w-[42.188rem] bg-[#12131B] rounded-[0.625rem] relative p-8">
+            <div className="w-full max-w-[42.188rem] bg-[#12131B] rounded-[0.625rem] relative p-8 sm-max:mx-5">
               <button
                 type="button"
                 className="absolute right-5 top-4 text-[1.25rem] font-bold text-white"

@@ -15,6 +15,9 @@ const config: Config = {
         yellow: "var(--secondary)"
       },
     },
+    screens: {
+      'sm-max': {'max': '760px'},
+    }
   },
   plugins: [],
 };

@@ -41,14 +41,14 @@ export default function Products() {
   return (
     <div>
       <ToastContainer />
-      <div className="max-w-[90rem] w-full mx-auto px-8">
-        <div className="flex items-center justify-between mt-[1.563rem] mb-[5.938rem]">
+      <div className="max-w-[90rem] w-full mx-auto px-8 sm-max:px-3">
+        <div className="flex items-center justify-between mt-[1.563rem] mb-[5.938rem] sm-max:flex-col sm-max:items-start sm-max:mb-6">
           <p className="text-[0.875rem] font-thin text-white">
             {"Home > Produtos > Alimentação"}
           </p>
           <button
             type="button"
-            className="max-w-[12.5rem] w-full h-[3.125rem] bg-yellow rounded-[0.875rem] text-[1.25rem] font-bold text-white"
+            className="max-w-[12.5rem] w-full h-[3.125rem] bg-yellow rounded-[0.875rem] text-[1.25rem] font-bold text-white sm-max:mt-3 sm-max:text-[1rem]"
             onClick={handleOpenRegisterProductModal}
           >
             Novo Produto
