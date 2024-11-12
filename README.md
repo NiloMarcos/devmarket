@@ -52,7 +52,7 @@ Instale as dependências do servidor
   yarn dev ( Após instalar as dependências rode este comando para subir o servidor ).
 ```
 
-Inicie o projeto na raiz
+Inicie o projeto na raiz ( Abra outro terminal e rode o comando, ambos os terminais rodando em simultâneo )
 
 ```bash
   yarn dev
