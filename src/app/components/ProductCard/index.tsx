@@ -288,7 +288,7 @@ export function ProductCard({
 
               <div className="flex flex-col gap-1">
                 <p className="text-[0.875rem] font-normal text-white">
-                  Preço: {item.price}
+                  Preço: {formatToCurrency(item.price)}
                 </p>
                 <p className="text-[0.875rem] font-normal text-white">
                   Kg: {item.unitMeasurement}
@@ -334,7 +334,7 @@ export function ProductCard({
               </p>
               <div className="mt-4 text-white flex flex-col gap-2">
                 <p><strong>Nome:</strong> {viewProduct.name}</p>
-                <p><strong>Preço:</strong> {viewProduct.price}</p>
+                <p><strong>Preço:</strong> {formatToCurrency(viewProduct.price)}</p>
                 <p><strong>Unidade:</strong> {viewProduct.unitMeasurement}</p>
                 <p><strong>Quantidade:</strong> {viewProduct.amount}</p>
                 <p><strong>Perecível:</strong> {viewProduct.perishable ? "Sim" : "Não"}</p>
